@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp"
+    android:gravity="center_vertical">
+
+    <!-- Biểu tượng trạng thái -->
+    <ImageView
+        android:id="@+id/motionIcon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/ic_motion_detected" /> <!-- Thay bằng biểu tượng của bạn -->
+
+    <!-- Nội dung hiển thị -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1">
+
+        <!-- Thời gian ghi nhận -->
+        <TextView
+            android:id="@+id/timestampTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Timestamp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/purple_700" />
+
+        <!-- Trạng thái chuyển động -->
+        <TextView
+            android:id="@+id/motionTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Motion Status"
+            android:textSize="16sp"
+            android:textColor="@color/teal_200" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/vl"
+            android:text="Xóa"
+            android:visibility="gone"
+            />
+    </LinearLayout>
+
+    <!-- Thời gian cụ thể dưới dạng giờ phút -->
+    <TextView
+        android:id="@+id/timeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="12:30 PM"
+        android:textSize="14sp"
+        android:textStyle="italic"
+        android:textColor="#888888"
+        android:layout_marginStart="8dp" />
+
+</LinearLayout>
